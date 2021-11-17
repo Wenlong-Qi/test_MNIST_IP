@@ -1,0 +1,2131 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 27 14:51:43 2021" VIVADOVERSION="2020.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="finn_design" PACKAGE="fgg484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFIFO_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFIFO_2" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFIFO_5" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFIFO_6" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFIFO_10" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFIFO_1" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFIFO_2" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFIFO_5" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFIFO_6" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFIFO_10" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="ap_rst_n"/>
+        <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="ap_rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axis_0_tvalid" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="in0_V_V_TVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axis_0_tready" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="in0_V_V_TREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="s_axis_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="in0_V_V_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="m_axis_0_tvalid" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="out_V_V_TVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="m_axis_0_tready" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="out_V_V_TREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="m_axis_0_tdata" RIGHT="0" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="out_V_V_TDATA"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_s_axis_0" NAME="s_axis_0" TYPE="TARGET">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_0_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_0_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_0_tdata"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="LabelSelect_Batch_0_out_V_V" NAME="m_axis_0" TYPE="INITIATOR">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_0_tvalid"/>
+        <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_0_tready"/>
+        <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_0_tdata"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="2110271443" FULLNAME="/ConvolutionInputGenerator_0" HWVERSION="1.0" INSTANCE="ConvolutionInputGenerator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_0" VLNV="xilinx.com:hls:ConvolutionInputGenerator_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_ConvolutionInputGenerator_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="7151"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_1_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271443" FULLNAME="/ConvolutionInputGenerator_1" HWVERSION="1.0" INSTANCE="ConvolutionInputGenerator_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_1" VLNV="xilinx.com:hls:ConvolutionInputGenerator_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_ConvolutionInputGenerator_1_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="1343"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_5_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_1_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271441" FULLNAME="/ConvolutionInputGenerator_2" HWVERSION="1.0" INSTANCE="ConvolutionInputGenerator_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ConvolutionInputGenerator_2" VLNV="xilinx.com:hls:ConvolutionInputGenerator_2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_ConvolutionInputGenerator_2_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="167"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="39" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_1_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_2_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271444" FULLNAME="/FMPadding_Batch_0" HWVERSION="1.0" INSTANCE="FMPadding_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="FMPadding_Batch_0" VLNV="xilinx.com:hls:FMPadding_Batch_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_FMPadding_Batch_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="906"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="s_axis_0_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="s_axis_0_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FMPadding_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="s_axis_0_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_1" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_s_axis_0" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="FMPadding_Batch_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271440" FULLNAME="/LabelSelect_Batch_0" HWVERSION="1.0" INSTANCE="LabelSelect_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LabelSelect_Batch_0" VLNV="xilinx.com:hls:LabelSelect_Batch_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_LabelSelect_Batch_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="15"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="m_axis_0_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="m_axis_0_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="finn_design_imp" PORT="m_axis_0_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_4_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="LabelSelect_Batch_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271447" FULLNAME="/StreamingDataWidthConverter_Batch_0" HWVERSION="1.0" INSTANCE="StreamingDataWidthConverter_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_0" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingDataWidthConverter_Batch_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="12549"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_0_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271446" FULLNAME="/StreamingDataWidthConverter_Batch_1" HWVERSION="1.0" INSTANCE="StreamingDataWidthConverter_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_1" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingDataWidthConverter_Batch_1_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="2885"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_1" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_1_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_1_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271445" FULLNAME="/StreamingDataWidthConverter_Batch_2" HWVERSION="1.0" INSTANCE="StreamingDataWidthConverter_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingDataWidthConverter_Batch_2" VLNV="xilinx.com:hls:StreamingDataWidthConverter_Batch_2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingDataWidthConverter_Batch_2_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="485"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_2_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_2_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271443" FULLNAME="/StreamingFCLayer_Batch_0" HWVERSION="1.0" INSTANCE="StreamingFCLayer_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_0" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFCLayer_Batch_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="112901"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_2" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_2_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271442" FULLNAME="/StreamingFCLayer_Batch_1" HWVERSION="1.0" INSTANCE="StreamingFCLayer_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_1" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFCLayer_Batch_1_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="25926"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_6" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_6_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_1_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271442" FULLNAME="/StreamingFCLayer_Batch_2" HWVERSION="1.0" INSTANCE="StreamingFCLayer_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_2" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFCLayer_Batch_2_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="4326"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="39" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_10" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_10_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_2_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271440" FULLNAME="/StreamingFCLayer_Batch_3" HWVERSION="1.0" INSTANCE="StreamingFCLayer_Batch_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_3" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_3:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFCLayer_Batch_3_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="246"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_2" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_4" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_2_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_3_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271440" FULLNAME="/StreamingFCLayer_Batch_4" HWVERSION="1.0" INSTANCE="StreamingFCLayer_Batch_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFCLayer_Batch_4" VLNV="xilinx.com:hls:StreamingFCLayer_Batch_4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFCLayer_Batch_4_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="605"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="LabelSelect_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LabelSelect_Batch_0" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_3_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFCLayer_Batch_4_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/StreamingFIFO_1" HWVERSION="1.0" INSTANCE="StreamingFIFO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_1" VLNV="xilinx.com:hls:StreamingFIFO_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFIFO_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="FMPadding_Batch_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="FMPadding_Batch_0" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="FMPadding_Batch_0_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_1_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/StreamingFIFO_10" HWVERSION="1.0" INSTANCE="StreamingFIFO_10" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_10" VLNV="xilinx.com:hls:StreamingFIFO_10:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFIFO_10_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="39" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_2" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_2_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_10_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/StreamingFIFO_2" HWVERSION="1.0" INSTANCE="StreamingFIFO_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_2" VLNV="xilinx.com:hls:StreamingFIFO_2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFIFO_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_0" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_0_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_0" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_0_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_2_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="1"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/StreamingFIFO_5" HWVERSION="1.0" INSTANCE="StreamingFIFO_5" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_5" VLNV="xilinx.com:hls:StreamingFIFO_5:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFIFO_5_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingMaxPool_Batch_0" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_0_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_5_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/StreamingFIFO_6" HWVERSION="1.0" INSTANCE="StreamingFIFO_6" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingFIFO_6" VLNV="xilinx.com:hls:StreamingFIFO_6:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingFIFO_6_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="count" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_1_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_1" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_1_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_1" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="ConvolutionInputGenerator_1_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingFIFO_6_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271443" FULLNAME="/StreamingMaxPool_Batch_0" HWVERSION="1.0" INSTANCE="StreamingMaxPool_Batch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_0" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_0:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingMaxPool_Batch_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="4070"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_0_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_0" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFIFO_5_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFIFO_5" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_0_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_0_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271441" FULLNAME="/StreamingMaxPool_Batch_1" HWVERSION="1.0" INSTANCE="StreamingMaxPool_Batch_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_1" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingMaxPool_Batch_1_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="790"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="39" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_1_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_1" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="ConvolutionInputGenerator_2_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ConvolutionInputGenerator_2" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_1_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_1_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="5"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="2110271440" FULLNAME="/StreamingMaxPool_Batch_2" HWVERSION="1.0" INSTANCE="StreamingMaxPool_Batch_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="StreamingMaxPool_Batch_2" VLNV="xilinx.com:hls:StreamingMaxPool_Batch_2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="finn_design_StreamingMaxPool_Batch_2_0"/>
+        <PARAMETER NAME="clk_period" VALUE="20"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="64"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="50000000.000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in0_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="out_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="in0_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="out_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="in0_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingDataWidthConverter_Batch_2_out_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingDataWidthConverter_Batch_2" PORT="out_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="out_V_V_TVALID" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="in0_V_V_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="out_V_V_TREADY" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="in0_V_V_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="out_V_V_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="StreamingFCLayer_Batch_3_in0_V_V_TDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="StreamingFCLayer_Batch_3" PORT="in0_V_V_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="StreamingDataWidthConverter_Batch_2_out_V_V" NAME="in0_V_V" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="in0_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="in0_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="in0_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="StreamingMaxPool_Batch_2_out_V_V" NAME="out_V_V" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="8"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="50000000.000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="finn_design_ap_clk_0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="out_V_V_TVALID"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="out_V_V_TREADY"/>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="out_V_V_TDATA"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

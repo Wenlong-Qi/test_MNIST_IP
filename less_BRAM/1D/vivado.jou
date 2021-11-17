@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Nov  9 18:00:28 2021
+# Process ID: 3172
+# Current directory: /tmp/finn_dev_wenlong/vivado_stitch_proj_a2tej8p_
+# Command line: vivado -mode batch -source make_project.tcl
+# Log file: /tmp/finn_dev_wenlong/vivado_stitch_proj_a2tej8p_/vivado.log
+# Journal file: /tmp/finn_dev_wenlong/vivado_stitch_proj_a2tej8p_/vivado.jou
+#-----------------------------------------------------------
+source make_project.tcl
